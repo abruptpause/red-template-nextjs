@@ -8,14 +8,16 @@ specifiers:
   postcss: ^8.4.12
   react: 18.1.0
   react-dom: 18.1.0
+  sass: ^1.51.0
   tailwindcss: ^3.0.24
 
 dependencies:
   autoprefixer: 10.4.5_postcss@8.4.12
-  next: 12.1.5_react-dom@18.1.0+react@18.1.0
+  next: 12.1.5_008f76c92927c3d3636842a829086498
   postcss: 8.4.12
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
+  sass: 1.51.0
   tailwindcss: 3.0.24
 
 devDependencies:
@@ -692,7 +694,7 @@ packages:
       eslint-plugin-jsx-a11y: 6.5.1_eslint@8.14.0
       eslint-plugin-react: 7.29.1_eslint@8.14.0
       eslint-plugin-react-hooks: 4.3.0_eslint@8.14.0
-      next: 12.1.5_react-dom@18.1.0+react@18.1.0
+      next: 12.1.5_008f76c92927c3d3636842a829086498
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1110,6 +1112,10 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  /immutable/4.0.0:
+    resolution: {integrity: sha512-zIE9hX70qew5qTUjSS7wi1iwj/l7+m54KWU247nhM3v806UdGj1yDndXj+IOYxxtW9zyLI+xqFNZjTuDaLUqFw==}
+    dev: false
+
   /import-fresh/3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -1368,7 +1374,7 @@ packages:
     resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}
     dev: true
 
-  /next/12.1.5_react-dom@18.1.0+react@18.1.0:
+  /next/12.1.5_008f76c92927c3d3636842a829086498:
     resolution: {integrity: sha512-YGHDpyfgCfnT5GZObsKepmRnne7Kzp7nGrac07dikhutWQug7hHg85/+sPJ4ZW5Q2pDkb+n0FnmLkmd44htIJQ==}
     engines: {node: '>=12.22.0'}
     hasBin: true
@@ -1391,6 +1397,7 @@ packages:
       postcss: 8.4.5
       react: 18.1.0
       react-dom: 18.1.0_react@18.1.0
+      sass: 1.51.0
       styled-jsx: 5.0.1_react@18.1.0
     optionalDependencies:
       '@next/swc-android-arm-eabi': 12.1.5
@@ -1736,6 +1743,16 @@ packages:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
     dependencies:
       queue-microtask: 1.2.3
+
+  /sass/1.51.0:
+    resolution: {integrity: sha512-haGdpTgywJTvHC2b91GSq+clTKGbtkkZmVAb82jZQN/wTy6qs8DdFm2lhEQbEwrY0QDRgSQ3xDurqM977C3noA==}
+    engines: {node: '>=12.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.0.0
+      source-map-js: 1.0.2
+    dev: false
 
   /scheduler/0.22.0:
     resolution: {integrity: sha512-6QAm1BgQI88NPYymgGQLCZgvep4FyePDWFpXVK+zNSUgHwlqpJy8VEh8Et0KxTACS4VWwMousBElAZOH9nkkoQ==}

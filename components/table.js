@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+// https://codepen.io/chriscoyier/pen/PrJdxb
+
 const Table = () => (
 <table>
   <thead>
