@@ -1,16 +1,45 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#parent{
+  width: 1000px;
+  height: 1000px;
+  background-color: red;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+#child{
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  position: sticky;
+  top: 0px;
+  left: 0px;
 }
 
-* {
-  box-sizing: border-box;
+table {
+  text-align: left;
+  position: relative;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 0.25rem;
+}
+tr.red th {
+  background: red;
+  color: white;
+}
+tr.green th {
+  background: green;
+  color: white;
+}
+tr.purple th {
+  background: purple;
+  color: white;
+}
+th {
+  background: white;
+  position: sticky;
+  top: 0; /* Don't forget this, required for the stickiness */
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
 }
