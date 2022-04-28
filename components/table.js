@@ -3,6 +3,7 @@
 // https://codepen.io/chriscoyier/pen/PrJdxb
 
 const Table = () => (
+<div className="grid w-full bg-teal-300 min-h-screen items-center justify-center p-20">
 <table>
   <thead>
     <tr className="red">
@@ -730,7 +731,7 @@ const Table = () => (
     </tr>
   </tbody>
 </table>
-
+</div>
 
 )
 

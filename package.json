@@ -6,7 +6,8 @@
     "dev": "clear && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "edit": "${EDITOR} pages/*.js components/*.js styles/*.css styles/*.scss"
   },
   "dependencies": {
     "autoprefixer": "^10.4.5",

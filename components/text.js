@@ -5,7 +5,7 @@
 // https://codepen.io/dudleystorey/pen/yNxPRy
 
 const Text = () => (
-  <div className="text-body">
+  <div className="text-body w-full bg-blue-400 min-h-screen items-center justify-center p-20">
     <p>{`Rank grass, waist high, grows upon the plain of Phutra&mdash;the gorgeous flowering grass of the inner world, each particular blade of which is tipped with a tiny, five-pointed blossom&mdash;brilliant little stars of varying colors that twinkle in the green foliage to add still another charm to the weird, yet lovely, landscape.`}</p>
     <div id="sticky">
       <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/core.jpg" alt="Visualisation of the Earth's core, showing the planet cut in half with the core bulging from the center" />
