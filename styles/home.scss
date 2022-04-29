@@ -86,21 +86,3 @@ th {
   top: 0;
   box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
 }
-
-/* simple.js */
-
-/* #parent { */
-  /* width: 100%; */
-  /* width: 1000px; */
-  /* height: 1000px; */
-  /* background-color: red; */
-/* } */
-
-#child {
-  width: 200px;
-  height: 200px;
-  background-color: blue;
-  position: sticky;
-  top: 0px;
-  left: 0px;
-}
