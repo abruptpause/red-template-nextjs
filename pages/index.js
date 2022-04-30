@@ -1,32 +1,30 @@
 #!/usr/bin/env node
 
+const PlaceHolder = ({ bg = 'bg-slate-50', text = 'section' }) => (
+  <section className={`flex items-center justify-center min-h-screen ${bg}`}>
+    <h1 className='text-center text-5xl capitalize'>{text}</h1>
+  </section>
+)
+
+const Sticky = ({ bg = 'bg-sky-500/[.01]', text = 'sticky' }) => (
+  <section className={ `absolute top-0 left-0 grid grid-cols-3 w-full h-full ${bg}` }>
+    <div className='bg-green-200 col-span-1 col-start-3'>
+      <div className='top-0 right-0 sticky flex bg-teal-600 items-center justify-center p-10'>
+        <p className='text-center text-4xl capitalize'>{text}</p>
+      </div>
+    </div>
+  </section>
+)
+
 const Home = () => (
   <main>
-    <div className="relative">
-      <div className='absolute top-0 left-0 grid grid-cols-3 w-full h-full' style={{ backgroundColor: 'rgba(255, 0, 0, 0.4)' }}>
-        <div className='bg-green-200 col-span-1 col-start-3'>
-          <div className='top-0 right-0 sticky flex bg-teal-600 items-center justify-center'>
-            <h1 className='text-center text-3xl capitalize'>sticky content</h1>
-          </div>
-        </div>
-      </div>
-
-      <section className='flex items-center justify-center min-h-screen bg-purple-400'>
-        <h1 className='text-center text-5xl capitalize'>section 1</h1>
-      </section>
-
-      <section className='flex items-center justify-center min-h-screen bg-purple-700'>
-        <h1 className='text-center text-5xl capitalize'>section 2</h1>
-      </section>
-    </div>
-
-    <section className='relative flex items-center justify-center min-h-screen bg-purple-200'>
-      <h1 className='text-center text-5xl capitalize'>section 3</h1>
+    <section className='relative'>
+      <Sticky />
+      <PlaceHolder bg='bg-teal-100' />
+      <PlaceHolder bg='bg-blue-400' />
     </section>
-
-    <section className='relative flex items-center justify-center min-h-screen bg-blue-500'>
-      <h1 className='text-center text-5xl capitalize'>section 4</h1>
-    </section>
+    <PlaceHolder bg='bg-teal-200' />
+    <PlaceHolder bg='bg-blue-500' />
   </main>
 )
 
