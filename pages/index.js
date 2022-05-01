@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const css = {
+  Header: 'text-center text-blue-800 text-8xl flex col-span-2 justify-center items-center sticky h-screen top-0 right-0',
   StickyImage: 'grid justify-center w-full items-center aspect-square bg-red-200 text-red-700 text-5xl text-center my-24',
   Sticky: {
     section: 'absolute top-0 left-0 grid grid-cols-3 w-full h-full bg-red-600/[.08]',
@@ -12,8 +13,8 @@ const css = {
   }
 }
 
-const Header = ({ text = ['HEADER', 'HEADER', 'HEADER'] }) => (
-  <div className='text-7xl flex col-span-2 justify-center items-center sticky h-screen top-0 right-0'>
+const Header = ({ text = ['HEADER', 'TEXT'] }) => (
+  <div className={css.Header}>
     <div>
       {
         Array.isArray(text) && text.length
@@ -61,12 +62,12 @@ const Home = () => (
   <main>
     <section className='relative'>
       <Sticky />
-      <PlaceHolder bg='blue-200' fg='blue-700' />
-      <PlaceHolder bg='blue-400' fg='blue-700' />
+      <PlaceHolder bg='blue-200' />
+      <PlaceHolder bg='blue-400' />
     </section>
-    <PlaceHolder bg='teal-200' fg='teal-700' />
-    <PlaceHolder bg='teal-500' fg='teal-700' />
-    <PlaceHolder bg='teal-800' fg='teal-700' />
+    <PlaceHolder bg='teal-200' />
+    <PlaceHolder bg='teal-500' />
+    <PlaceHolder bg='teal-800' />
   </main>
 )
 
