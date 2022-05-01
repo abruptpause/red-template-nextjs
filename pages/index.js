@@ -9,7 +9,7 @@ const PlaceHolder = ({ bg = 'bg-slate-50', text = 'section' }) => (
 const Sticky = ({ bg = 'bg-sky-500/[.01]', text = 'sticky' }) => (
   <section className={ `absolute top-0 left-0 grid grid-cols-3 w-full h-full ${bg}` }>
     <div className='bg-green-200 col-span-1 col-start-3'>
-      <div className='top-0 right-0 sticky flex bg-teal-600 items-center justify-center p-10'>
+      <div className='h-screen top-0 right-0 sticky flex bg-teal-600 items-center justify-center p-10'>
         <p className='text-center text-4xl capitalize'>{text}</p>
       </div>
     </div>
