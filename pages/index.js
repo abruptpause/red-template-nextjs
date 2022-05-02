@@ -2,7 +2,7 @@
 
 const css = {
   Header: 'sticky flex h-screen top-0 right-0 text-center text-blue-800 text-8xl col-span-2 justify-center items-center',
-  StickyImage: 'grid justify-center w-full items-center aspect-square bg-red-200 text-red-700 text-5xl text-center my-24',
+  Square: 'grid justify-center w-full items-center aspect-square bg-red-200 text-red-700 text-5xl text-center my-24',
   Sticky: {
     section: 'absolute top-0 left-0 grid grid-cols-3 w-full h-full bg-red-600/[.08]',
     div: 'sticky overflow-y-scroll col-span-1 col-start-3 h-screen top-0 right-0 bg-red-400 p-16'
@@ -25,8 +25,8 @@ const Header = ({ text = ['HEADER', 'TEXT'] }) => (
   </div>
 )
 
-const StickyImage = ({ text }) => (
-  <div className={css.StickyImage}>
+const Square = ({ text }) => (
+  <div className={css.Square}>
     <div>
     {
       text
@@ -39,12 +39,12 @@ const StickyImage = ({ text }) => (
 
 const Sticky = () => (
   <section className={css.Sticky.section}>
-      <Header />
-      <div className={css.Sticky.div}>
-        <StickyImage />
-        <StickyImage />
-        <StickyImage />
-      </div>
+    <Header />
+    <div className={css.Sticky.div}>
+      <Square />
+      <Square />
+      <Square />
+    </div>
   </section>
 )
 
@@ -65,9 +65,11 @@ const Home = () => (
       <PlaceHolder bg='bg-blue-200' />
       <PlaceHolder bg='bg-blue-400' />
     </section>
+
     <PlaceHolder bg='bg-teal-200' />
     <PlaceHolder bg='bg-teal-500' />
     <PlaceHolder bg='bg-teal-800' />
+
   </main>
 )
 
