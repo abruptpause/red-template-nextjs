@@ -33,6 +33,15 @@
   text-transform: uppercase;
 }
 
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  /* scroll-padding-top: 2em; */
+}
+
+.scroll-element {
+  scroll-snap-align: start;
+}
+
 * {
   scrollbar-width: none; /* Firefox */
 }
@@ -40,3 +49,5 @@
 *::-webkit-scrollbar {
   display: none;
 }
+
+/* scroll-snap-type: y mandatory; */

@@ -6,13 +6,13 @@ const css = {
     h1: 'text-xl pb-12'
   },
   Square: {
-   div: 'grid justify-center w-full items-center aspect-square bg-red-200 text-red-700 text-5xl text-center my-24',
+   div: 'relative grid justify-center w-full items-center aspect-square bg-red-200 text-red-700 text-5xl text-center my-24 scroll-element',
    h1: 'freight-neo text-center text-red-300 text-2xl'
   },
   Sticky: {
     section: 'absolute top-0 left-0 grid grid-cols-3 w-full h-full bg-red-600/[.08]',
-    div: 'sticky overflow-y-scroll col-span-1 col-start-3 h-screen top-0 right-0 bg-red-400 p-16',
-    h1: 'absolute freight-neo text-center text-red-500 top-0 left-0 w-full my-16 text-3xl'
+    div: 'sticky overflow-y-scroll col-span-1 col-start-3 h-screen top-0 right-0 bg-red-400 p-16 scroll-container scroll-pt-16',
+    h1: 'absolute freight-neo text-center text-red-500 top-0 left-0 w-full py-16 text-3xl scroll-element'
   },
   PlaceHolder: {
     section: 'flex items-center justify-center min-h-screen',
@@ -51,6 +51,7 @@ const Sticky = () => (
     <Header text={['featuring', 'art', 'by', 'john ivy']} caption='abrupt pause' />
     <div className={css.Sticky.div}>
       <h1 className={css.Sticky.h1}>right sticky</h1>
+      <Square />
       <Square />
       <Square />
       <Square />
