@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 
 const css = {
-  Header: 'freight-neo sticky flex h-screen top-0 right-0 text-center text-blue-700 text-9xl col-span-2 justify-center items-center',
+  Header: {
+    div: 'freight-neo sticky flex h-screen top-0 right-0 text-center text-blue-700 text-9xl col-span-2 justify-center items-center',
+    h1: 'text-xl pb-12'
+  },
   Square: {
    div: 'grid justify-center w-full items-center aspect-square bg-red-200 text-red-700 text-5xl text-center my-24',
    h1: 'freight-neo text-center text-red-300 text-2xl'
@@ -18,9 +21,9 @@ const css = {
 }
 
 const Header = ({ text = ['hero', 'title', 'text'], caption = 'left sticky'}) => (
-  <div className={css.Header}>
+  <div className={css.Header.div}>
     <div>
-    <h1 className='text-xl pb-12'>{caption}</h1>
+    <h1 className={css.Header.h1}>{caption}</h1>
       {
         Array.isArray(text) && text.length
         ? text.map((line, key) => (<h1 key={key}>{line}</h1>))
@@ -45,7 +48,7 @@ const Square = ({ text }) => (
 
 const Sticky = () => (
   <section className={css.Sticky.section}>
-    <Header />
+    <Header text={['featuring', 'art', 'by', 'john ivy']} caption='abrupt pause' />
     <div className={css.Sticky.div}>
       <h1 className={css.Sticky.h1}>right sticky</h1>
       <Square />
