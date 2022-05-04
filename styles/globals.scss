@@ -32,3 +32,11 @@
   font-family: 'FreightNeo';
   text-transform: uppercase;
 }
+
+* {
+  scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
