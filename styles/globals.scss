@@ -35,7 +35,6 @@
 
 .scroll-container {
   scroll-snap-type: y mandatory;
-  /* scroll-padding-top: 2em; */
 }
 
 .scroll-element {
@@ -43,11 +42,14 @@
 }
 
 * {
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
 }
 
 *::-webkit-scrollbar {
   display: none;
 }
 
-/* scroll-snap-type: y mandatory; */
+.text-super-xl {
+  font-size: 10rem;
+  line-height: 1;
+}

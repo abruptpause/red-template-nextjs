@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "edit": "${EDITOR} pages/*.js components/*.js styles/*.css styles/*.scss"
+    "edit": "${EDITOR} pages/index.js styles/globals.scss ${HOME}/work/langs/css/index.html",
+    "edit-all": "${EDITOR} pages/*.js components/*.js styles/*.css styles/*.scss"
   },
   "dependencies": {
     "autoprefixer": "^10.4.5",
