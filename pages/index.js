@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const Header = ({ text = ['hero', 'title', 'text'], caption = 'left sticky' }) => {
-  // text-9xl = 8rem/128px
   const css = {
     // div: 'freight-neo sticky flex h-screen top-0 right-0 text-center text-blue-700 text-super-xl col-span-3 justify-center items-center',
     div: 'freight-neo sticky flex h-screen top-0 right-0 text-center text-blue-700 text-9xl col-span-2 justify-center items-center',
