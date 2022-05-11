@@ -2,9 +2,7 @@
 
 const Header = ({ text = ['hero', 'title', 'text'], caption = 'left sticky' }) => {
   const css = {
-    // text-super-xl
     div: 'freight-neo sticky flex h-screen top-0 text-center text-white text-9xl col-span-2 justify-center items-center',
-    // div: 'freight-neo sticky flex h-screen top-0 right-0 text-center text-white text-9xl col-span-2 justify-center items-center',
     h1: 'text-xl pb-12'
   }
 
@@ -39,9 +37,7 @@ const Sticky = () => {
   const css = {
     section: 'absolute top-0 left-0 grid grid-cols-3 w-full h-full',
     div: `sticky overflow-y-scroll col-span-1 col-start-3 h-screen top-0 scroll-container bg-slate-300 grid grid-cols-12 scroll-py-20`,
-    // div: `sticky overflow-y-scroll col-span-1 col-start-3 h-screen top-0 px-16 py-10 scroll-container scroll-pt-16 ${bg} grid grid-cols-10`,
     h1: 'col-span-12 text-white freight-neo text-center top-0 left-0 text-3xl pt-6 mb-8 sticky'
-    // h1: 'col-span-10 text-white freight-neo text-center top-0 left-0 text-3xl my-16 scroll-element'
   }
 
   return (
@@ -86,12 +82,35 @@ const Home = () => (
     <section className='relative'>
       <Sticky />
       <PlaceHolder img='/images/main/hero.jpg' />
-      <PlaceHolder bg='bg-slate-100' />
+      <PlaceHolder bg='bg-slate-200' />
     </section>
 
-    <PlaceHolder bg='bg-slate-200' />
-    <PlaceHolder bg='bg-slate-100' />
-    <PlaceHolder />
+
+    <section className='min-h-screen grid grid-cols-12 bg-slate-500'>
+      <div className='col-span-8 bg-slate-800'>
+        <img src='/images/main/JIV1.jpg' />
+      </div>
+      <div className='col-span-4 bg-slate-200'>
+        <img src='/images/main/JIV2.jpg' />
+      </div>
+    </section>
+
+
+    <section className='min-h-screen grid grid-cols-12 bg-slate-400'>
+      <div className='col-span-6 bg-slate-700'>
+        <img src='/images/main/JIV3.jpg' />
+      </div>
+    </section>
+
+    <section className='min-h-screen grid grid-cols-12 bg-slate-200'>
+      <div className='col-span-6 bg-slate-600'>
+        <img src='/images/main/JIV4.jpg' />
+      </div>
+      <div className='col-span-6 bg-slate-500'>
+        <img src='/images/main/JIV5.jpg' />
+      </div>
+    </section>
+
   </main>
 )
 
