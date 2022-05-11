@@ -85,29 +85,57 @@ const Home = () => (
       <PlaceHolder bg='bg-slate-200' />
     </section>
 
-
     <section className='min-h-screen grid grid-cols-12 bg-slate-500'>
-      <div className='col-span-8 bg-slate-800'>
-        <img src='/images/main/JIV1.jpg' />
+      <div className='col-span-8'>
+      <div
+        className='bg-center bg-cover aspect-5/7'
+        style={{
+          backgroundImage: 'url(\'/images/main/JIV1.jpg\')'
+        }}
+      >
       </div>
-      <div className='col-span-4 bg-slate-200'>
-        <img src='/images/main/JIV2.jpg' />
+      </div>
+      <div className='col-span-4'>
+      <div
+        className='bg-center bg-cover aspect-4/5'
+        style={{
+          backgroundImage: 'url(\'/images/main/JIV2.jpg\')'
+        }}
+      >
+      </div>
       </div>
     </section>
 
-
     <section className='min-h-screen grid grid-cols-12 bg-slate-400'>
-      <div className='col-span-6 bg-slate-700'>
-        <img src='/images/main/JIV3.jpg' />
+      <div className='col-span-6'>
+      <div
+        className='bg-center bg-cover aspect-2/3'
+        style={{
+          backgroundImage: 'url(\'/images/main/JIV3.jpg\')'
+        }}
+      >
+      </div>
       </div>
     </section>
 
     <section className='min-h-screen grid grid-cols-12 bg-slate-200'>
-      <div className='col-span-6 bg-slate-600'>
-        <img src='/images/main/JIV4.jpg' />
+      <div className='col-span-6'>
+        <div
+          className='aspect-4/5 bg-center bg-cover'
+          style={{
+            backgroundImage: 'url(\'/images/main/JIV4.jpg\')'
+          }}
+        >
+        </div>
       </div>
-      <div className='col-span-6 bg-slate-500'>
-        <img src='/images/main/JIV5.jpg' />
+      <div className='col-span-6'>
+        <div
+          className='aspect-square bg-center bg-cover'
+          style={{
+            backgroundImage: 'url(\'/images/main/JIV5.jpg\')'
+          }}
+        >
+        </div>
       </div>
     </section>
 
