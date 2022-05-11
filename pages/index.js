@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+// TODO
+// NeueHaasGrotesk
+
 const Header = ({ text = ['hero', 'title', 'text'], caption = 'left sticky' }) => {
   const div = 'freight-neo sticky flex h-screen top-0 text-center text-white text-9xl col-span-2 justify-center items-center'
   const h1 = 'text-xl pb-12'
@@ -78,7 +81,7 @@ const Home = () => (
       <PlaceHolder bg='bg-slate-200' />
     </section>
 
-    <section className='min-h-screen grid grid-cols-3 bg-slate-500'>
+    <section className='min-h-screen grid grid-cols-3 bg-slate-100'>
       <div className='col-span-2 grid grid-cols-12 gap-14 m-14'>
       <div
         className='col-span-8 bg-center bg-cover aspect-5/7 self-start'
@@ -88,7 +91,7 @@ const Home = () => (
       >
       </div>
       <div
-        className='col-span-4 bg-center bg-cover aspect-4/5 self-end'
+        className='col-span-4 bg-center bg-cover aspect-4/5 self-end mb-24'
         style={{
           backgroundImage: 'url(\'/images/main/JIV2.jpg\')'
         }}
@@ -97,24 +100,26 @@ const Home = () => (
       </div>
     </section>
 
-    <section className='min-h-screen grid grid-cols-3 bg-slate-400'>
+    <section className='min-h-screen grid grid-cols-3 bg-slate-200'>
       <div className='col-span-2 grid grid-cols-12 gap-14 m-14'>
       <div
-        className='col-span-6 bg-center bg-cover aspect-2/3 self-center'
+        className='col-span-6 bg-center bg-cover aspect-2/3 self-start'
         style={{
           backgroundImage: 'url(\'/images/main/JIV3.jpg\')'
         }}
       >
       </div>
-      <div className='col-span-6 self-center text-2xl'>
-        <h1>header</h1>
-        <p> paragraph text lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-        <p> paragraph text lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+      <div className='col-span-6 self-end font-extralight text-2xl'>
+        <h1 className='freight-neo mb-14 font-normal text-3xl text-slate-400'>Pterodactyl-543</h1>
+        <p className='mb-4'>{`So, in not thinking too much about what I'm trying to do, and just doing it.`}</p>
+        <p className='mb-4'>{`For me, I rarely approach a work with a preconception of how it should look. It's much too frustrating, and I'm just not that good.`}</p>
+        <p className='mb-4'>{`My best laid plans are never realized, and often what I end up with has little or nothing to do with my initial premise.`}</p>
+        <p className='mb-4'>{`It's not a very efficient way to work, I suppose.`}</p>
       </div>
       </div>
     </section>
 
-    <section className='min-h-screen grid grid-cols-3 bg-slate-200'>
+    <section className='min-h-screen grid grid-cols-3 bg-slate-100'>
         <div className='col-span-2 grid grid-cols-12 gap-14 m-14'>
         <div
           className='col-span-6 aspect-4/5 bg-center bg-cover self-start'
