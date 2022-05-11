@@ -2,7 +2,7 @@
 
 const Header = ({ text = ['hero', 'title', 'text'], caption = 'left sticky' }) => {
   const css = {
-    // div: 'freight-neo sticky flex h-screen top-0 right-0 text-center text-blue-700 text-super-xl col-span-3 justify-center items-center',
+    // text-super-xl
     div: 'freight-neo sticky flex h-screen top-0 right-0 text-center text-white text-9xl col-span-2 justify-center items-center',
     h1: 'text-xl pb-12'
   }
@@ -23,7 +23,7 @@ const Header = ({ text = ['hero', 'title', 'text'], caption = 'left sticky' }) =
 
 const Square = ({ text, img, start = 'col-start-1' }) => {
   const css = {
-    div: `bg-cover bg-center relative grid justify-center w-full items-center aspect-square bg-white my-12 scroll-element col-span-8 ${start}`,
+    div: `bg-cover bg-center relative grid justify-center w-full items-center aspect-square bg-white mb-16 scroll-element col-span-8 ${start}`,
   }
   return (
     <div className={css.div} style={{
@@ -38,7 +38,7 @@ const Sticky = ({bg = 'bg-slate-300'}) => {
   const css = {
     section: 'absolute top-0 left-0 grid grid-cols-3 w-full h-full',
     div: `sticky overflow-y-scroll col-span-1 col-start-3 h-screen top-0 px-16 py-10 scroll-container scroll-pt-16 ${bg} grid grid-cols-10`,
-    h1: 'col-span-10 text-white freight-neo text-center top-0 left-0 text-3xl scroll-element'
+    h1: 'col-span-10 text-white freight-neo text-center top-0 left-0 text-3xl mt-16 mb-16 scroll-element'
   }
 
   return (
@@ -46,7 +46,7 @@ const Sticky = ({bg = 'bg-slate-300'}) => {
       <Header text={['featuring', 'art', 'by', 'john ivy']} caption='abrupt pause' />
 
       <div className={css.div}>
-        <h1 className={css.h1}>right sticky</h1>
+        <h1 className={css.h1}>featured work</h1>
         <Square img='/images/side/SIDE1.png' start='col-start-3' />
         <Square img='/images/side/SIDE2.png' />
         <Square img='/images/side/SIDE3.png' start='col-start-3' />
