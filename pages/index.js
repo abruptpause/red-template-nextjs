@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 const Header = ({ text = ['hero', 'title', 'text'], caption = 'left sticky' }) => {
-  const div = 'freight-neo sticky flex h-screen top-0 text-center text-white text-9xl col-span-2 justify-center items-center'
-  const h1 = 'text-xl pb-12'
-
   return (
-    <div className={div}>
+    <div className={`
+      freight-neo sticky flex h-screen top-0 text-center text-white
+      text-9xl col-span-2 justify-center items-center
+    `}>
       <div>
-        <h1 className={h1}>{caption}</h1>
+        <h1 className='text-xl pb-12'>{caption}</h1>
         {
           Array.isArray(text) && text.length
             ? text.map((line, key) => (<h1 key={key}>{line}</h1>))
@@ -19,50 +19,50 @@ const Header = ({ text = ['hero', 'title', 'text'], caption = 'left sticky' }) =
 }
 
 const Square = ({ img, start }) => {
-  const div = `bg-cover bg-center relative grid justify-center w-full items-center aspect-square bg-white my-8 scroll-element col-span-7 ${start}`
-
   return (
-    <div className={div} style={{
-        backgroundImage: `url('${img}')`
-      }}>
+    <div
+    className={`
+      bg-cover bg-center relative grid justify-center w-full items-center
+      aspect-square bg-white my-8 scroll-element col-span-7 ${start}
+    `}
+    style={{
+      backgroundImage: `url('${img}')`
+    }}>
     </div>
   )
 }
 
 // the header and the right bar.
 const Sticky = () => {
-  const section = 'absolute top-0 left-0 grid grid-cols-3 w-full h-full'
-  const div = `sticky overflow-y-scroll col-span-1 col-start-3 h-screen top-0 scroll-container bg-slate-300 grid grid-cols-12 scroll-py-20`
-  const h1 = 'col-span-12 text-white freight-neo text-center top-0 left-0 text-3xl pt-6 mb-8 sticky'
-
   return (
-    <section className={section}>
+    <section className='absolute top-0 left-0 grid grid-cols-3 w-full h-full'>
       <Header text={['featuring', 'art', 'by', 'john ivy']} caption='abrupt pause' />
-
-      <div className={div}>
-        <h1 className={h1}>featured work</h1>
+      <div className={`
+        sticky overflow-y-scroll col-span-1 col-start-3 h-screen top-0
+        scroll-container bg-slate-300 grid grid-cols-12 scroll-py-20
+      `}>
+        <h1 className={`
+          col-span-12 text-white freight-neo text-center top-0 left-0 text-3xl pt-6 mb-8 sticky
+        `}>featured work</h1>
         <Square img='/images/side/SIDE1.png' start='col-start-5' />
         <Square img='/images/side/SIDE2.png' start='col-start-2' />
         <Square img='/images/side/SIDE3.png' start='col-start-5' />
-
       </div>
     </section>
   )
 }
 
 const PlaceHolder = ({ bg = 'bg-white', fg = 'text-slate-200', img, text }) => {
-  const section = `flex items-center justify-center min-h-screen bg-center bg-cover ${bg}`
-  const h1 = `freight-neo text-center text-5xl ${fg}`
   return (
     <section
-      className={section}
+      className={`flex items-center justify-center min-h-screen bg-center bg-cover ${bg}`}
       style={{
         backgroundImage: `url('${img}')`
       }}
     >
       {
       text
-        ? <h1 className={h1}>{text}</h1>
+        ? <h1 className={`freight-neo text-center text-5xl ${fg}`}>{text}</h1>
         : null
       }
     </section>
@@ -71,10 +71,10 @@ const PlaceHolder = ({ bg = 'bg-white', fg = 'text-slate-200', img, text }) => {
 
 // col-span-8
 // col-span-10 col-start-2
-const Section = ({ content, bg = 'bg-slate-100' }) => (
+const Section = ({ children, bg = 'bg-slate-100' }) => (
   <div className={`min-h-screen grid grid-cols-12 ${bg}`}>
     <div className='col-span-8 grid grid-cols-12 gap-14 m-14'>
-      {content}
+      {children}
     </div>
   </div>
 )
@@ -144,10 +144,17 @@ const Home = () => (
       <PlaceHolder bg='bg-slate-200' />
     </div>
 
-    <Section content={First} />
-    <Section content={Second} bg='bg-slate-200' />
-    <Section content={Third} />
+    <Section>
+      {First}
+    </Section>
 
+    <Section bg='bg-slate-200'>
+      {Second}
+    </Section>
+
+    <Section>
+      {Third}
+    </Section>
   </main>
 )
 
