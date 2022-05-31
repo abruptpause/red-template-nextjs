@@ -9,7 +9,12 @@ const SideSquare = ({ img, start }) => (
     relative grid justify-center w-full items-center
     aspect-square bg-white my-8 scroll-element col-span-7 ${start}
   `}>
-    <Image layout='fill' alt='' src={img} />
+
+    { img &&
+      (
+        <Image layout='fill' alt='' src={img} />
+      )
+    }
   </div>
 )
 
@@ -26,6 +31,8 @@ const SideBar = () => (
     <SideSquare img='/images/side/SIDE1.png' start='col-start-5' />
     <SideSquare img='/images/side/SIDE2.png' start='col-start-2' />
     <SideSquare img='/images/side/SIDE3.png' start='col-start-5' />
+    <SideSquare img='' start='col-start-2' />
+    <SideSquare img='' start='col-start-5' />
 
   </div>
 )
