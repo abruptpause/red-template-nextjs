@@ -119,6 +119,7 @@ const Description = () => (
 
 const Home = () => {
   // sidebar closed
+  // eslint-disable-next-line
   const [span, setSpan] = useState('col-span-10 col-start-2')
 
   // sidebar open
