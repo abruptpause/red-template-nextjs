@@ -105,6 +105,18 @@ const TopSection = () => (
   </div>
 )
 
+const Description = () => (
+  <>
+    <h1 className='freight-neo font-normal text-3xl text-slate-400 mb-4'>
+      {'Pterodactyl-543'}
+    </h1>
+    <h2 className='freight-neo text-slate-500'>Medium: Paper and ...</h2>
+    <h2 className='freight-neo text-slate-500 mb-12'>
+      Size: 1234 x 4567 inches
+    </h2>
+  </>
+)
+
 const Home = () => {
   // sidebar closed
   const [span, setSpan] = useState('col-span-10 col-start-2')
@@ -116,15 +128,15 @@ const Home = () => {
     <main>
       <TopSection />
 
-      <Section bg='bg-slate-400' span={span}>
-        <div className='relative col-span-8 col-start-3 aspect-7/5 bg-slate-500 self-center'>
-          <Image alt='' src='/images/main/JIV6.jpg' layout='fill' />
-        </div>
-      </Section>
-
       <Section span={span}>
         <div className='relative col-span-8 aspect-5/7 self-start'>
           <Image alt='' src='/images/main/JIV1.jpg' layout='fill' />
+        </div>
+        <div className='relative col-span-4 self-end'>
+          <Description />
+        </div>
+        <div className='relative col-span-8 self-end text-right'>
+          <Description />
         </div>
         <div className='relative col-span-4 aspect-4/5 self-end mb-24'>
           <Image alt='' src='/images/main/JIV2.jpg' layout='fill' />
@@ -136,9 +148,7 @@ const Home = () => {
           <Image alt='' src='/images/main/JIV3.jpg' layout='fill' />
         </div>
         <div className='col-span-6 self-end'>
-          <h1 className='freight-neo mb-14 font-normal text-3xl text-slate-400'>
-            {'Pterodactyl-543'}
-          </h1>
+          <Description />
           {[
             `So, in not thinking too much about what I'm trying to do, and just doing it.`,
             `For me, I rarely approach a work with a preconception of how it should look. It's much too frustrating, and I'm just not that good.`,
@@ -155,9 +165,31 @@ const Home = () => {
         </div>
       </Section>
 
+      <Section bg='bg-slate-400' span={span}>
+        <div className='relative col-span-8 col-start-3 aspect-7/5 bg-slate-500 self-center'>
+          <Image alt='' src='/images/main/JIV6.jpg' layout='fill' />
+        </div>
+        <div className='col-span-8 col-start-3 text-center'>
+          <h1 className='freight-neo font-normal text-3xl text-slate-600 mb-4'>
+            {'Pterodactyl-543'}
+          </h1>
+          <h2 className='freight-neo text-slate-700'>Medium: Paper and ...</h2>
+          <h2 className='freight-neo text-slate-700 mb-12'>
+            Size: 1234 x 4567 inches
+          </h2>
+        </div>
+      </Section>
+
       <Section span={span}>
         <div className='relative col-span-6 aspect-4/5 self-start'>
           <Image alt='' src='/images/main/JIV4.jpg' layout='fill' />
+        </div>
+        <div className='relative col-span-5 self-end'>
+          <Description />
+        </div>
+
+        <div className='relative col-span-6 self-end text-right'>
+          <Description />
         </div>
         <div className='relative col-span-5 aspect-square self-end'>
           <Image alt='' src='/images/main/JIV5.jpg' layout='fill' />
