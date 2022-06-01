@@ -86,6 +86,7 @@ const Home = () => {
 
       <Section bg='bg-slate-400' span={span}>
         <div className='relative col-span-8 col-start-3 aspect-7/5 bg-slate-500 self-center'>
+                  <Image alt='' src='/images/main/JIV6.jpg' layout='fill' />
         </div>
       </Section>
 
