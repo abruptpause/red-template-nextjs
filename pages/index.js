@@ -57,11 +57,7 @@ const HeroText = ({ text = ['title', 'text'], subtext = 'subtext' }) => {
   )
 }
 
-const Section = ({
-  children,
-  bg = 'bg-slate-100',
-  span = 'col-span-10 col-start-2'
-}) => (
+const Section = ({ children, bg = 'bg-slate-100', span }) => (
   <div className={`min-h-screen grid grid-cols-12 ${bg}`}>
     <div className={`${span} grid grid-cols-12 gap-14 m-14`}>{children}</div>
   </div>
@@ -132,8 +128,8 @@ const Home = () => {
             `For me, I rarely approach a work with a preconception of how it should look. It's much too frustrating, and I'm just not that good.`,
             `My best laid plans are never realized, and often what I end up with has little or nothing to do with my initial premise.`,
             `It's not a very efficient way to work, I suppose.`
-          ].map((val, ind) => (
-            <p key={ind} className='mb-4'>
+          ].map((val, key) => (
+            <p key={key} className='mb-4'>
               {val}
             </p>
           ))}
