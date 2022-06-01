@@ -5,7 +5,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 
-const SideSquare = ({ img, start }) => (
+const Square = ({ img, start }) => (
   <div
     className={`
     relative grid justify-center w-full items-center
@@ -16,7 +16,7 @@ const SideSquare = ({ img, start }) => (
   </div>
 )
 
-const SideBar = () => (
+const Featured = () => (
   <div
     className={`
     sticky overflow-y-scroll col-span-1 col-start-3 h-screen top-0
@@ -31,15 +31,15 @@ const SideBar = () => (
       featured work
     </h1>
 
-    <SideSquare img='/images/side/SIDE1.png' start='col-start-5' />
-    <SideSquare img='/images/side/SIDE2.png' start='col-start-2' />
-    <SideSquare img='/images/side/SIDE3.png' start='col-start-5' />
-    <SideSquare img='' start='col-start-2' />
-    <SideSquare img='' start='col-start-5' />
+    <Square img='/images/side/SIDE1.png' start='col-start-5' />
+    <Square img='/images/side/SIDE2.png' start='col-start-2' />
+    <Square img='/images/side/SIDE3.png' start='col-start-5' />
+    <Square img='' start='col-start-2' />
+    <Square img='' start='col-start-5' />
   </div>
 )
 
-const HeroText = ({ text = ['title', 'text'], subtext = 'subtext' }) => {
+const Header = ({ text = ['title', 'text'], subtext = 'subtext' }) => {
   return (
     <div
       className={`
@@ -49,9 +49,9 @@ const HeroText = ({ text = ['title', 'text'], subtext = 'subtext' }) => {
     >
       <div>
         <h1 className='text-xl pb-12'>{subtext}</h1>
-        {Array.isArray(text) && text.length
-          ? text.map((val, ind) => <h1 key={ind}>{val}</h1>)
-          : null}
+        {Array.isArray(text) &&
+          text.length &&
+          text.map((val, ind) => <h1 key={ind}>{val}</h1>)}
       </div>
     </div>
   )
@@ -60,6 +60,48 @@ const HeroText = ({ text = ['title', 'text'], subtext = 'subtext' }) => {
 const Section = ({ children, bg = 'bg-slate-100', span }) => (
   <div className={`min-h-screen grid grid-cols-12 ${bg}`}>
     <div className={`${span} grid grid-cols-12 gap-14 m-14`}>{children}</div>
+  </div>
+)
+
+const TopSection = () => (
+  <div className='relative grid grid-cols-3'>
+    <div
+      className='absolute top-0 left-0 grid grid-cols-3 w-full z-10'
+      style={{
+        height: '200vh'
+      }}
+    >
+      <Header
+        text={['featuring', 'art', 'by', 'john ivy']}
+        subtext='abrupt pause'
+      />
+    </div>
+
+    <div className='absolute top-0 left-0 grid grid-cols-3 w-full h-full z-10'>
+      <Featured />
+    </div>
+
+    <div
+      className='col-span-2 relative h-screen bg-center bg-cover bg-white text-slate-200'
+      style={{ backgroundImage: `url('/images/main/hero.jpg')` }}
+    ></div>
+
+    <div className='col-span-2 relative flex h-screen bg-slate-200 items-end justify-center'></div>
+
+    <div className='col-span-2 relative bg-slate-200 text-justify grid grid-cols-5'>
+      <div className='pb-24 col-span-3 col-start-2'>
+        {[
+          `For me, I rarely approach a work with a preconception of how it should look. It's much too frustrating, and I'm just not that good.`,
+          `My best laid plans are never realized, and often what I end up with has little or nothing to do with my initial premise.`,
+          `Even when a piece is finished (which only means I've stopped working on it), What has been of interest to me has more to do with the process or evolution than the product.`,
+          `It's not a very efficient way to work, I suppose.`
+        ].map((val, key) => (
+          <p key={key} className='font-extralight mb-4 text-slate-500 text-xl'>
+            {val}
+          </p>
+        ))}
+      </div>
+    </div>
   </div>
 )
 
@@ -72,33 +114,7 @@ const Home = () => {
 
   return (
     <main>
-      <div className='relative grid grid-cols-3'>
-        <div className='absolute top-0 left-0 grid grid-cols-3 w-full h-full z-10'>
-          <HeroText
-            text={['featuring', 'art', 'by', 'john ivy']}
-            subtext='abrupt pause'
-          />
-          <SideBar />
-        </div>
-
-        <div
-          className='col-span-2 relative min-h-screen bg-center bg-cover bg-white text-slate-200'
-          style={{ backgroundImage: `url('/images/main/hero.jpg')` }}
-        ></div>
-
-        <div className='col-span-2 relative flex min-h-screen bg-slate-200 items-end justify-center'>
-          <div className='bg-red-300 mb-24'>
-            {[
-              `For me, I rarely approach a work with a preconception of how it should look. It's much too frustrating, and I'm just not that good.`,
-              `My best laid plans are never realized, and often what I end up with has little or nothing to do with my initial premise. Even when a piece is finished  ( which only means I've stopped working on it ).`,
-              `What has been of interest to me has more to do with the process or evolution than the product.`,
-              `It's not a very efficient way to work, I suppose.`
-            ].map((val, key) => (
-              <p key={key}>{val}</p>
-            ))}
-          </div>
-        </div>
-      </div>
+      <TopSection />
 
       <Section bg='bg-slate-400' span={span}>
         <div className='relative col-span-8 col-start-3 aspect-7/5 bg-slate-500 self-center'>
@@ -119,7 +135,7 @@ const Home = () => {
         <div className='relative col-span-6 aspect-2/3 self-start'>
           <Image alt='' src='/images/main/JIV3.jpg' layout='fill' />
         </div>
-        <div className='col-span-6 self-end font-extralight text-2xl'>
+        <div className='col-span-6 self-end'>
           <h1 className='freight-neo mb-14 font-normal text-3xl text-slate-400'>
             {'Pterodactyl-543'}
           </h1>
@@ -129,7 +145,10 @@ const Home = () => {
             `My best laid plans are never realized, and often what I end up with has little or nothing to do with my initial premise.`,
             `It's not a very efficient way to work, I suppose.`
           ].map((val, key) => (
-            <p key={key} className='mb-4'>
+            <p
+              key={key}
+              className='mb-4 text-slate-500 text-xl font-extralight'
+            >
               {val}
             </p>
           ))}
