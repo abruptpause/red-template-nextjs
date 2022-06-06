@@ -2,8 +2,13 @@
 
 // title, dimensions, medium
 
-import { useState } from 'react'
-import Image from 'next/image'
+// import { useState } from 'react'
+// import Image from 'next/image'
+
+const Image = ({ src }) => {
+  // eslint-disable-next-line
+  return <img className='absolute top-0 left-0 w-full h-full' src={src} alt='' />
+}
 
 const Square = ({ img, start }) => (
   <div
@@ -120,7 +125,8 @@ const Description = () => (
 const Home = () => {
   // sidebar closed
   // eslint-disable-next-line
-  const [span, setSpan] = useState('col-span-10 col-start-2')
+  // const [span, setSpan] = useState('col-span-10 col-start-2')
+  const span = 'col-span-10 col-start-2'
 
   // sidebar open
   // const [span, setSpan] = useState('col-span-8 col-start-1')
