@@ -6,7 +6,7 @@
 import Image from 'next/image'
 
 // const Image = ({ src }) => {
-  // eslint-disable-next-line
+// eslint-disable-next-line
   // return <img className='absolute top-0 left-0 w-full h-full' src={src} alt='' />
 // }
 
