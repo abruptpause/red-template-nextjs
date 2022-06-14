@@ -12,7 +12,7 @@ const CMS = dynamic(
   { ssr: false, loading: () => <p>Loading Admin...</p> }
 )
 
-const Admin = () => (<CMS />)
+const Admin = () => <CMS />
 
 export default Admin
 
