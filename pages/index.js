@@ -10,6 +10,33 @@ import Image from 'next/image'
   // return <img className='absolute top-0 left-0 w-full h-full' src={src} alt='' />
 // }
 
+
+// /*
+
+// https://github.com/netlify/netlify-cms/issues/3580
+
+import dynamic from 'next/dynamic';
+
+const config = {
+ // YOUR_CMS_CONFIG
+};
+
+const CMS = dynamic(
+  () =>
+    import('netlify-cms-app').then((cms) => {
+      cms.init({ config });
+    }),
+  { ssr: false, loading: () => <p>Loading Admin...</p> },
+);
+
+// const Admin: React.FC = () => {
+  // return <CMS />;
+// };
+
+// export default Admin;
+
+// */
+
 const Square = ({ img, start }) => (
   <div
     className={`
@@ -122,6 +149,7 @@ const Description = () => (
   </>
 )
 
+/*
 const Home = () => {
   // sidebar closed
   // eslint-disable-next-line
@@ -205,5 +233,8 @@ const Home = () => {
     </main>
   )
 }
+*/
+
+const Home = () => (<CMS />)
 
 export default Home
