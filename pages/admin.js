@@ -15,9 +15,3 @@ const CMS = dynamic(
 const Admin = () => <CMS />
 
 export default Admin
-
-// const Admin: React.FC = () => {
-// return <CMS />;
-// };
-
-// export default Admin;
