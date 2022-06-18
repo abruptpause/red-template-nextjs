@@ -31,13 +31,13 @@ const config = {
   // Backend configuration, in this case with git
   backend: {
     name: 'git-gateway',
-    branch: 'main',
-    // branch: "master",
+    // branch: 'main',
+    branch: "master",
     squash_merges: true
   },
 
   // Local backend is used during development
-  // local_backend: true,
+  local_backend: true,
 
   // Where to store the images
   media_folder: 'public/images/',
