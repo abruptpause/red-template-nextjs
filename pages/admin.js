@@ -84,7 +84,10 @@ const AdminPage = () => {
   return (
     <>
       <Head>
-        <script async src='https://identity.netlify.com/v1/netlify-identity-widget.js'></script>
+        <script
+          async
+          src='https://identity.netlify.com/v1/netlify-identity-widget.js'
+        ></script>
       </Head>
 
       <CMS />
