@@ -28,11 +28,13 @@ const config = {
   // We want to manually init the config file
   // cms_manual_init: true,
 
+  // https://stackoverflow.com/questions/62203427/problem-with-configuring-netlify-cms-with-git-gateway
   // Backend configuration, in this case with git
   backend: {
     name: 'git-gateway',
-    // branch: 'main',
-    branch: 'master',
+    branch: 'main',
+    repo: 'abruptpause/red-template-nextjs',
+    // branch: 'master',
     squash_merges: true
   },
 
