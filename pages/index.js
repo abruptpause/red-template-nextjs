@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 // import { useState } from 'react'
+import Head from 'next/head'
 import Image from 'next/image'
 
 // title, dimensions, medium
@@ -133,77 +134,88 @@ const Home = () => {
   // const [span, setSpan] = useState('col-span-8 col-start-1')
 
   return (
-    <main>
-      <TopSection />
+    <>
+      <Head>
+        <script
+          async
+          src='https://identity.netlify.com/v1/netlify-identity-widget.js'
+        ></script>
+      </Head>
 
-      <Section span={span}>
-        <div className='relative col-span-8 aspect-5/7 self-start'>
-          <Image alt='' src='/images/main/JIV1.jpg' layout='fill' />
-        </div>
-        <div className='relative col-span-4 self-end'>
-          <Description />
-        </div>
-        <div className='relative col-span-8 self-end text-right'>
-          <Description />
-        </div>
-        <div className='relative col-span-4 aspect-4/5 self-end mb-24'>
-          <Image alt='' src='/images/main/JIV2.jpg' layout='fill' />
-        </div>
-      </Section>
+      <main>
+        <TopSection />
 
-      <Section bg='bg-slate-200' span={span}>
-        <div className='relative col-span-6 aspect-2/3 self-start'>
-          <Image alt='' src='/images/main/JIV3.jpg' layout='fill' />
-        </div>
-        <div className='col-span-6 self-end'>
-          <Description />
-          {[
-            `So, in not thinking too much about what I'm trying to do, and just doing it.`,
-            `For me, I rarely approach a work with a preconception of how it should look. It's much too frustrating, and I'm just not that good.`,
-            `My best laid plans are never realized, and often what I end up with has little or nothing to do with my initial premise.`,
-            `It's not a very efficient way to work, I suppose.`
-          ].map((val, key) => (
-            <p
-              key={key}
-              className='mb-4 text-slate-500 text-xl font-extralight'
-            >
-              {val}
-            </p>
-          ))}
-        </div>
-      </Section>
+        <Section span={span}>
+          <div className='relative col-span-8 aspect-5/7 self-start'>
+            <Image alt='' src='/images/main/JIV1.jpg' layout='fill' />
+          </div>
+          <div className='relative col-span-4 self-end'>
+            <Description />
+          </div>
+          <div className='relative col-span-8 self-end text-right'>
+            <Description />
+          </div>
+          <div className='relative col-span-4 aspect-4/5 self-end mb-24'>
+            <Image alt='' src='/images/main/JIV2.jpg' layout='fill' />
+          </div>
+        </Section>
 
-      <Section bg='bg-slate-400' span={span}>
-        <div className='relative col-span-8 col-start-3 aspect-7/5 bg-slate-500 self-center'>
-          <Image alt='' src='/images/main/JIV6.jpg' layout='fill' />
-        </div>
-        <div className='col-span-8 col-start-3 text-center'>
-          <h1 className='freight-neo font-normal text-3xl text-slate-600 mb-4'>
-            {'Pterodactyl-543'}
-          </h1>
-          <h2 className='freight-neo text-slate-700'>Medium: Paper and ...</h2>
-          <h2 className='freight-neo text-slate-700 mb-12'>
-            Size: 1234 x 4567 inches
-          </h2>
-        </div>
-      </Section>
+        <Section bg='bg-slate-200' span={span}>
+          <div className='relative col-span-6 aspect-2/3 self-start'>
+            <Image alt='' src='/images/main/JIV3.jpg' layout='fill' />
+          </div>
+          <div className='col-span-6 self-end'>
+            <Description />
+            {[
+              `So, in not thinking too much about what I'm trying to do, and just doing it.`,
+              `For me, I rarely approach a work with a preconception of how it should look. It's much too frustrating, and I'm just not that good.`,
+              `My best laid plans are never realized, and often what I end up with has little or nothing to do with my initial premise.`,
+              `It's not a very efficient way to work, I suppose.`
+            ].map((val, key) => (
+              <p
+                key={key}
+                className='mb-4 text-slate-500 text-xl font-extralight'
+              >
+                {val}
+              </p>
+            ))}
+          </div>
+        </Section>
 
-      <Section span={span}>
-        <div className='relative col-span-6 aspect-4/5 self-start'>
-          <Image alt='' src='/images/main/JIV4.jpg' layout='fill' />
-        </div>
-        <div className='relative col-span-5 self-end'>
-          <Description />
-        </div>
+        <Section bg='bg-slate-400' span={span}>
+          <div className='relative col-span-8 col-start-3 aspect-7/5 bg-slate-500 self-center'>
+            <Image alt='' src='/images/main/JIV6.jpg' layout='fill' />
+          </div>
+          <div className='col-span-8 col-start-3 text-center'>
+            <h1 className='freight-neo font-normal text-3xl text-slate-600 mb-4'>
+              {'Pterodactyl-543'}
+            </h1>
+            <h2 className='freight-neo text-slate-700'>
+              Medium: Paper and ...
+            </h2>
+            <h2 className='freight-neo text-slate-700 mb-12'>
+              Size: 1234 x 4567 inches
+            </h2>
+          </div>
+        </Section>
 
-        <div className='relative col-span-6 self-end text-right'>
-          <Description />
-        </div>
-        <div className='relative col-span-5 aspect-square self-end'>
-          <Image alt='' src='/images/main/JIV5.jpg' layout='fill' />
-        </div>
-      </Section>
-    </main>
+        <Section span={span}>
+          <div className='relative col-span-6 aspect-4/5 self-start'>
+            <Image alt='' src='/images/main/JIV4.jpg' layout='fill' />
+          </div>
+          <div className='relative col-span-5 self-end'>
+            <Description />
+          </div>
+
+          <div className='relative col-span-6 self-end text-right'>
+            <Description />
+          </div>
+          <div className='relative col-span-5 aspect-square self-end'>
+            <Image alt='' src='/images/main/JIV5.jpg' layout='fill' />
+          </div>
+        </Section>
+      </main>
+    </>
   )
 }
 // */
