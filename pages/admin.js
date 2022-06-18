@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+/* eslint-disable */
+
 // https://github.com/netlify/netlify-cms/issues/3580
 // https://www.luckymedia.dev/blog/page-builder-with-netlify-cms-and-next-js
 
@@ -30,13 +32,13 @@ const config = {
 
   // https://stackoverflow.com/questions/62203427/problem-with-configuring-netlify-cms-with-git-gateway
   // Backend configuration, in this case with git
-  backend: {
-    name: 'git-gateway',
-    branch: 'main',
-    repo: 'abruptpause/red-template-nextjs',
+  // backend: {
+    // name: 'git-gateway',
+    // branch: 'main',
+    // repo: 'abruptpause/red-template-nextjs',
     // branch: 'master',
-    squash_merges: true
-  },
+    // squash_merges: true
+  // },
 
   // Local backend is used during development
   local_backend: true,
