@@ -32,7 +32,7 @@ const config = {
   backend: {
     name: 'git-gateway',
     // branch: 'main',
-    branch: "master",
+    branch: 'master',
     squash_merges: true
   },
 
