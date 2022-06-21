@@ -1,7 +1,8 @@
-#!/usr/bin/env node
+/* eslint-disable */
 
 // import { useState } from 'react'
 import Head from 'next/head'
+import Script from 'next/script'
 import Image from 'next/image'
 
 // title, dimensions, medium
@@ -136,10 +137,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <script
-          async
-          src='https://identity.netlify.com/v1/netlify-identity-widget.js'
-        ></script>
+        <Script src='https://identity.netlify.com/v1/netlify-identity-widget.js' />
       </Head>
 
       <main>

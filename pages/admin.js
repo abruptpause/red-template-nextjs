@@ -1,40 +1,23 @@
-#!/usr/bin/env node
-
-// https://github.com/netlify/netlify-cms/issues/3580
-// https://www.luckymedia.dev/blog/page-builder-with-netlify-cms-and-next-js
-
-/*
-import dynamic from 'next/dynamic'
-
-const config = {}
-
-const CMS = dynamic(
-  () =>
-    import('netlify-cms-app').then((cms) => {
-      cms.init(config)
-    }),
-  { ssr: false, loading: () => <p>Loading Admin...</p> }
-)
-
-const Admin = () => <CMS />
-
-export default Admin
-*/
+/* eslint-disable */
 
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
+import Script from 'next/script'
+
+// https://www.netlifycms.org/docs/configuration-options/
+// https://github.com/netlify/netlify-cms/issues/3580
+// https://www.luckymedia.dev/blog/page-builder-with-netlify-cms-and-next-js
+// https://stackoverflow.com/questions/62203427/problem-with-configuring-netlify-cms-with-git-gateway
 
 const config = {
   // We want to manually init the config file
   // cms_manual_init: true,
 
-  // https://stackoverflow.com/questions/62203427/problem-with-configuring-netlify-cms-with-git-gateway
   // Backend configuration, in this case with git
   backend: {
     name: 'git-gateway',
     branch: 'main',
     repo: 'abruptpause/red-template-nextjs',
-    // branch: 'master',
     squash_merges: true
   },
 
@@ -43,9 +26,6 @@ const config = {
 
   // Where to store the images
   media_folder: 'public/images/',
-
-  // Where to link the images
-  // public_folder: "public/images/",
 
   // The Pages collection
   collections: [
@@ -78,23 +58,23 @@ const CMS = dynamic(
     }),
   {
     ssr: false,
-    loading: () => <h1>Loading</h1>
+    loading: () => (
+      <div>
+        <p>Loading...</p>
+      </div>
+    )
   }
 )
 
-const AdminPage = () => {
+const Admin = () => {
   return (
     <>
       <Head>
-        <script
-          async
-          src='https://identity.netlify.com/v1/netlify-identity-widget.js'
-        ></script>
+        <Script src='https://identity.netlify.com/v1/netlify-identity-widget.js' />
       </Head>
-
       <CMS />
     </>
   )
 }
 
-export default AdminPage
+export default Admin
