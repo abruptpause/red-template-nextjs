@@ -34,26 +34,56 @@ const config = {
       name: 'Images',
       label: 'Image',
       label_singular: 'Image',
-      folder: 'public/images/etc',
+      folder: 'public/images/main',
       create: true,
       slug: '{{title}}_{{slug}}',
       extension: 'json',
       format: 'json',
       fields: [
         {
-          label: 'Description',
-          name: 'description',
+          label: 'Title',
+          name: 'title',
           widget: 'string',
-          required: false,
+          required: true,
+        },
+        {
+          label: 'Medium',
+          name: 'medium',
+          widget: 'string',
+          required: true,
+        },
+        {
+          label: 'Size',
+          name: 'size',
+          widget: 'string',
+          required: true,
         },
         {
           label: 'File',
           name: 'file',
           widget: 'image',
           required: true,
-        },
-      ],
+        }
+      ]
     },
+    {
+      name: 'Side Images',
+      label: 'Side Image',
+      label_singular: 'Side Image',
+      folder: 'public/images/side',
+      create: true,
+      slug: '{{title}}_{{slug}}',
+      extension: 'json',
+      format: 'json',
+      fields: [
+        {
+          label: 'File',
+          name: 'file',
+          widget: 'image',
+          required: true,
+        }
+      ]
+    }
   ],
 }
 
