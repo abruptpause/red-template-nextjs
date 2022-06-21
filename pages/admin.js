@@ -33,15 +33,11 @@ const config = {
     {
       name: 'Images',
       label: 'Image',
-      // editor: { preview: false },
       label_singular: 'Image',
-      folder: 'public/Images',
+      folder: 'public/images/etc',
       create: true,
-      // slug: '{{slug}}',
       slug: '{{title}}_{{slug}}',
-      // extension: 'md',
       extension: 'json',
-      // format: 'yaml-frontmatter',
       format: 'json',
       fields: [
         {
