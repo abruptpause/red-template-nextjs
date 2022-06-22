@@ -28,6 +28,7 @@ const config = {
 
   // Where to store the images
   media_folder: 'public/images',
+  public_folder: 'public/images',
 
   // The Pages collection
   collections: [
@@ -68,9 +69,9 @@ const config = {
       ]
     },
     {
-      name: 'Side Images',
-      label: 'Side Image',
-      label_singular: 'Side Image',
+      name: 'SideImages',
+      label: 'Side Images',
+      label_singular: 'SideImage',
       folder: 'public/images/side',
       create: true,
       slug: '{{title}}_{{slug}}',
