@@ -12,18 +12,19 @@ import Script from 'next/script'
 
 const config = {
   // We want to manually init the config file
-  // cms_manual_init: true,
+  cms_manual_init: true,
 
   // Backend configuration, in this case with git
   backend: {
-    name: 'git-gateway',
+    // name: 'git-gateway',
+    name: 'github',
     branch: 'main',
     repo: 'abruptpause/red-template-nextjs',
-    squash_merges: true,
+    // squash_merges: true,
   },
 
   // Local backend is used during development
-  // local_backend: true,
+  local_backend: true,
 
   // Where to store the images
   media_folder: 'public/images',
