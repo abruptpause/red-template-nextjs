@@ -16,8 +16,8 @@ const config = {
 
   // Backend configuration, in this case with git
   backend: {
-    // name: 'git-gateway',
-    name: 'github',
+    name: 'git-gateway',
+    // name: 'github',
     branch: 'main',
     repo: 'abruptpause/red-template-nextjs',
     // squash_merges: true,
