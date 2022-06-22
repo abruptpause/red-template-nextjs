@@ -19,7 +19,7 @@ const config = {
     name: 'git-gateway',
     // name: 'github',
     branch: 'main',
-    repo: 'abruptpause/red-template-nextjs',
+    // repo: 'abruptpause/red-template-nextjs',
     squash_merges: true,
   },
 
