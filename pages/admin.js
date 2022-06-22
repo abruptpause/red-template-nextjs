@@ -19,12 +19,12 @@ const config = {
     name: 'git-gateway',
     // name: 'github',
     branch: 'main',
-    // repo: 'abruptpause/red-template-nextjs',
+    repo: 'abruptpause/red-template-nextjs',
     squash_merges: true,
   },
 
   // Local backend is used during development
-  local_backend: true,
+  // local_backend: true,
 
   // Where to store the images
   media_folder: 'public/images',
