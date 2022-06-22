@@ -1,17 +1,18 @@
 backend:
   name: git-gateway
   branch: main
-  repo: abruptpause/red-template-nextjs
+  repo: abruptpause/red-template-nextjs'
 
-site_url: https://red-template-2.netlify.app/
+site_url: 'https://red-template-2.netlify.app/'
 
-media_folder: public/images
+media_folder: 'public/images'
+public_folder: '/images/uploads'
 
 collections:
   - name: 'images'
     label: 'Images'
     label_singular: 'Image'
-    folder: 'images/main'
+    folder: 'images/uploads'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Medium', name: 'medium', widget: 'string' }
