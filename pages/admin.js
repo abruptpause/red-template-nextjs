@@ -26,7 +26,7 @@ const config = {
   // local_backend: true,
 
   // Where to store the images
-  media_folder: 'public/images/',
+  media_folder: 'public/images',
 
   // The Pages collection
   collections: [
@@ -84,7 +84,7 @@ const config = {
         }
       ]
     }
-  ],
+  ]
 }
 
 const CMS = dynamic(
