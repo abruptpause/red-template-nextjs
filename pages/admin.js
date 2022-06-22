@@ -20,7 +20,7 @@ const config = {
     // name: 'github',
     branch: 'main',
     repo: 'abruptpause/red-template-nextjs',
-    // squash_merges: true,
+    squash_merges: true,
   },
 
   // Local backend is used during development
@@ -35,7 +35,7 @@ const config = {
       name: 'Images',
       label: 'Image',
       label_singular: 'Image',
-      folder: 'public/images/main',
+      folder: 'main',
       create: true,
       slug: '{{title}}_{{slug}}',
       extension: 'json',
@@ -71,7 +71,7 @@ const config = {
       name: 'Side Images',
       label: 'Side Image',
       label_singular: 'Side Image',
-      folder: 'public/images/side',
+      folder: 'side',
       create: true,
       slug: '{{title}}_{{slug}}',
       extension: 'json',
