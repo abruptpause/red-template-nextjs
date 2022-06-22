@@ -28,7 +28,7 @@ const config = {
 
   // Where to store the images
   media_folder: 'public/images',
-  public_folder: 'public/images',
+  // public_folder: 'public/images',
 
   // The Pages collection
   collections: [
