@@ -69,15 +69,21 @@ const config = {
       ]
     },
     {
-      name: 'SideImages',
+      name: 'Side Images',
       label: 'Side Images',
-      label_singular: 'SideImage',
+      label_singular: 'Side Image',
       folder: 'public/images/side',
       create: true,
       slug: '{{title}}_{{slug}}',
       extension: 'json',
       format: 'json',
       fields: [
+        {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+          required: true,
+        },
         {
           label: 'File',
           name: 'file',
