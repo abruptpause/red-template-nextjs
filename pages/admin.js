@@ -12,7 +12,7 @@ import Script from 'next/script'
 
 const config = {
   // We want to manually init the config file
-  cms_manual_init: true,
+  // cms_manual_init: true,
 
   // Backend configuration, in this case with git
   backend: {
